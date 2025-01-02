@@ -1,0 +1,96 @@
+---
+title: 'High Cost: Connect America Fund Broadband Map (CAF Map)'
+date: last-modified
+draft: false
+format:
+  gfm:
+    variant: +yaml_metadata_block
+prefer-html: true
+---
+
+
+## ACAM I and ACAM II
+
+### About
+
+This dataset serves as the foundation for the Connect America Fund
+Broadband Map (CAF Map), which displays the geographic areas eligible
+for CAF support, as well as the specific fixed locations where carriers
+participating in the program have built out broadband service. The
+information in the CAF Map comes directly from carriers, which submit
+broadband deployment data annually through USAC’s High Cost Universal
+Broadband (HUBB) portal. The current CAF Map is based on data certified
+in the HUBB as of September 30, 2023. USAC independently verifies
+deployment to a random sample of reported locations each year to monitor
+carrier compliance with CAF build-out obligations, but not all data in
+the map has been subject to this review.
+
+[HUBB](https://www.usac.org/high-cost/annual-requirements/submit-data-in-the-hubb/)
+
+[Source
+Data](https://opendata.usac.org/High-Cost/High-Cost-Connect-America-Fund-Broadband-Map-CAF-M/r59r-rpip/data_preview)
+
+[About
+Page](https://opendata.usac.org/High-Cost/High-Cost-Connect-America-Fund-Broadband-Map-CAF-M/r59r-rpip/about_data)
+
+### Analysis
+
+Records represent a single address with awards deployed or will deploy
+in this year. The locations have a deployed date spanning from
+`2000-01-01` to `2023-09-19`.
+
+A single address may have multiple households. This is represented by
+the column “Locations Deployed”.
+
+Available Fund Types are listed below but for the purpose of this
+request we filtered to ACAM I and ACAM II fund type.
+
+**Fund Type**
+
+- `ACAM`
+
+- `ACAM II`
+
+- `AK Plan`
+
+- `CAF II`
+
+- `CAF II Auc`
+
+- `CAF-BLS`
+
+- `PR Fixed`
+
+- `RBE`
+
+- `RDOF`
+
+To determine the census block we used the field, Census Block, 2010
+Census block of the deployment location.
+
+**We created 3 different flags:**
+
+- `acam_i_flag`: 1 indicates the block received ACAM I and 0 indicates
+  it did not.
+
+- `acam_ii_flag`: 1 indicates the block received ACAM II and 0 indicates
+  it did not.
+
+- `has_previous_funding`: 1 indicates the block received ACAM I and/or
+  ACAM II and 0 indicates it did not.
+
+We produced two tables, `proj_bead.acam_bl_tidy` and
+`proj_bead.acam_bl_wide`.
+
+When generating the `proj_bead.acam_bl_tidy` table we had to crosswalk
+the 2010 block fips to the 2020 block fips using the
+`proj_bead.cross_tab1020`. We did this to create consistency with the
+other BEAD datasets.
+
+Some 2010 blocks with different funding flags were merged into one block
+in 2020. The 2020 block will be flagged as previously funded\`if any of
+the 2010 blocks were previously funded.
+
+Wide format table, `proj_bead.acam_bl_wide`is grouped by Census Block
+and summarized. The table is kept at 2010 blocks to avoid duplicate
+rows.

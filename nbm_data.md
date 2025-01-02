@@ -1,5 +1,5 @@
 ---
-title: "FCC NBM data"
+title: FCC NBM data
 date: last-modified
 draft: false
 format:
@@ -8,20 +8,17 @@ format:
 prefer-html: true
 ---
 
-```{r}
-#| label: utility functions
+
+``` r
 source("R/table_with_options.R")
 ```
 
-This page will display all available data (minus challenge data[^chalenge_api]]) that can downloaded from FCC NBM. 
+This page will display all available data (minus challenge data[^1]\])
+that can downloaded from FCC NBM.
 
-[^chalenge_api]: this data is stored in a slighly different endpoint see 
+## Getting the Information about NBM Release:
 
-## Getting the Information about NBM Release: 
-
-```{r}
-#| label: setting URL and getting a table with release
-#| eval: false
+``` r
 filing_url <- "https://broadbandmap.fcc.gov/nbm/map/api/published/filing"
 
 # getting a list of release
@@ -35,13 +32,12 @@ release <- get_release(filing_url)
 table_with_options(release)
 ```
 
-## Getting links for every CSV in NBM: 
+## Getting links for every CSV in NBM:
 
-Even if NBM have a biannual release cycle it is updated more frequently (around every two weeks). 
+Even if NBM have a biannual release cycle it is updated more frequently
+(around every two weeks).
 
-```{r}
-#| label: list all available data
-#| eval: false
+``` r
 get_data_url <- paste0("https://broadbandmap.fcc.gov/nbm/map/api/",
                        "national_map_process/nbm_get_data_download/")
 
@@ -69,3 +65,5 @@ fixed <-
 
 table_with_options(fixed)
 ```
+
+[^1]: this data is stored in a slighly different endpoint see

@@ -1,10 +1,10 @@
 ---
 title: "FCC NBM CORI metadata and storage"
-date: last-modified
-format: 
-  html:
-    code-fold: true
-engine: knitr
+draft: false
+format:
+  gfm:
+    variant: +yaml_metadata_block
+prefer-html: true
 ---
 
 ## DB fields Descriptions

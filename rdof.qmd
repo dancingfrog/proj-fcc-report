@@ -1,10 +1,11 @@
 ---
 title: "RDOF EDA"
 date: last-modified
-format: 
-  html:
-    code-fold: true
-engine: knitr
+draft: false
+format:
+  gfm:
+    variant: +yaml_metadata_block
+prefer-html: true
 ---
 
 We had some previous works on RDOF for BCAT. It used shapefiles and gpkg to produce the output. This was not needed anymore as we could relly on census boundary (with less topological error) and just use the spreadsheet profided (`.xls`). 

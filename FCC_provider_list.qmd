@@ -1,10 +1,11 @@
 ---
 title: "FCC providers list"
 date: last-modified
-format: 
-  html:
-    code-fold: true
-engine: knitr
+draft: false
+format:
+  gfm:
+    variant: +yaml_metadata_block
+prefer-html: true
 ---
 
 ```{r}

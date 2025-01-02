@@ -1,5 +1,5 @@
 ---
-title: "About"
+title: About
 draft: false
 format:
   gfm:
@@ -7,6 +7,7 @@ format:
 prefer-html: true
 ---
 
+
 Sharing quick EDA about FCC data.
 
-Link: [https://www.fcc.gov/BroadbandData](https://www.fcc.gov/BroadbandData)
+Link: <https://www.fcc.gov/BroadbandData>
