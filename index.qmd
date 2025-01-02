@@ -52,6 +52,8 @@ The NBM offers detailed broadband availability information:
 
 This dataset is an abstraction of the "Fabric" locations data developed by **CostQuest**. The Fabric provides precise geolocation data for **Broadband Serviceable Locations** (BSLs), which are updated biannually (June and December) with interim updates every two weeks. The exact coordinates for each locations are only inclued in the Fabric dataset, so using the National Broadband Map data we can only link a record for a location to a Census Block (2020 vintage) or H3 hexagon.
 
+!["What's on the national broadband map" Source: [https://www.fcc.gov/BroadbandData](https://www.fcc.gov/BroadbandData)](thumbnail.png){#fig-broadbanddata}
+
 Every location is characterized by:
 
 - Who is providing those services (`frn`, `provider_id`, and `brand_name`)
@@ -60,22 +62,17 @@ Every location is characterized by:
 - Ways to geographically locate it (`state_abbr`, `block_geoid`, `h3_res8_id`)
 
 ::: {.callout-tip}
-A location (see @sec-BSL) can be covered by multiple Internet Services Provides (ISP) with  potentially different services and technologies. Hence, it can represented in the data can by many "rows".
+A location (see [What is a BSL?](#what-is-a-broadband-serviceable-location-bsl)) can be covered by multiple Internet Services Provides (ISP) with  potentially different services and technologies. Hence, it can represented in the data can by many "rows".
 :::
 
 :::{.aside}
 Sometimes the process of collecting those two datasets is called **B**roadband **D**ata **C**ollection (BDC)
 :::
 
-!["What's on the national broadband map" Source: [https://www.fcc.gov/BroadbandData](https://www.fcc.gov/BroadbandData)](img/whats-on-the-national-broadband-map-113023-1.png){#fig-broadbanddata}
-
-<br />
-<br />
-<br />
 
 #### Broadband Funding Map (BFM)
 
-The BFM provides information about "*broadband infrastructure deployment projects funded by the Federal government throughout the United States*". The public data: 
+The BFM provides information about "*broadband infrastructure deployment projects funded by the Federal government throughout the United States*". The public data:
 
 - Categorizes projects by program and geographic boundaries.
 - Highlights funding from four federal agencies across 12 programs, including 1,853 projects as of May 2024.

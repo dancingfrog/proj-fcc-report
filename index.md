@@ -251,3 +251,5 @@ FCC could change those definitions and for example move the bar at 100/20: [http
     [https://www.pewtrusts.org/-/media/assets/2023/06/un–and-underserved-definitions-ta-memo-pdf.pdf](https://www.pewtrusts.org/-/media/assets/2023/06/un--and-underserved-definitions-ta-memo-pdf.pdf)
 
 [^10]: In May 2024 no “Middle mile” were present
+
+Copyright © 2024 Center On Rural Innovation
