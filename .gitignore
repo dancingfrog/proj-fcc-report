@@ -5,3 +5,4 @@ _site/
 *.Rproj
 
 .DS_Store
+.idea
